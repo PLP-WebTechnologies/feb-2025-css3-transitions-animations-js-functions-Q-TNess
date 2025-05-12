@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: beige;
+    color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+    
+  /* HEADING AND INTRODUCTION */
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 200px;
+  }
+  
+  
+.heading {
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.heading h1 {
+    font-size: 3rem;
+    color: #150404;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heading p{
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #374151;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* PRODUCT IMAGES */
+.content {
+    width: 100%;
+    max-width: 800px;
+    height: 320px; /* enough for 3D carousel */
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    margin-bottom: 60px; /* pushes form down */
+    padding-top: 0px; /* removes space above carousel */
+  }
+   
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+  }
+  
+  .camera__card {
+    position: absolute;
+    width: 120px;
+    height: 160px;
+    top: 70px;
+    left: 90px;
+    background-color: #442222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .camera__card:hover {
+    transform: scale(1.1);
+    border: 3px solid #4466cc;
+    box-shadow: 0 0 10px #4466cc;
+  }
+  
+  .camera__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Circular layout */
+  .camera__card:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
+  .camera__card:nth-child(2) { transform: rotateY(45deg) translateZ(400px); }
+  .camera__card:nth-child(3) { transform: rotateY(90deg) translateZ(400px); }
+  .camera__card:nth-child(4) { transform: rotateY(135deg) translateZ(400px); }
+  .camera__card:nth-child(5) { transform: rotateY(180deg) translateZ(400px); }
+  .camera__card:nth-child(6) { transform: rotateY(225deg) translateZ(400px); }
+  .camera__card:nth-child(7) { transform: rotateY(270deg) translateZ(400px); }
+  .camera__card:nth-child(8) { transform: rotateY(315deg) translateZ(400px); }
+  
+  @keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+  
+  /* Pause animation on hover */
+  .paused {
+    animation-play-state: paused !important;
+  }
+
+  /* POP-UP NAMES ON THE CARDS */
+.tooltip {
+  position: absolute;
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.camera__card:hover .tooltip {
+  opacity: 1;
+}
+
+
+    /* Responsive styles */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .content {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .camera__card {
+      width: 100px;
+      height: 130px;
+    }
+  
+    .camera__card img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* THE FORM SECTION */
+
+  .form-section {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto 0;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: #111827;
+  font-size: 1rem;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section select {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-section .form-note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #374151;
+}
+
+.form-section button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #1d4ed8;
+}

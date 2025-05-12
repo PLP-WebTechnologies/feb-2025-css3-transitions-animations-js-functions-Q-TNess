@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Content</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <!-- HEADING AND INTRODUCTION -->
+  <div class="main-wrapper">
+    <div class="heading">
+      <h1>Pre-Loved Digital Cameras</h1><br>
+      <p>Meet your Pre-Loved DC.</p>
+      <p>We are here to help you find the perfect camera for your needs.</p>
+      <p>We have a wide range of cameras available for you to choose from.</p>
+    </div>
+</div>
+
+<!-- PRODUCTS IMAGES -->
+  <div class="content">
+    <div class="container" id="carouselContainer">
+      <div class="camera__card"><img src="images/digital (1).jpg" alt="Camera 1">
+        <div class="tooltip">Camera 1</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (2).jpg" alt="Camera 2">
+        <div class="tooltip">Camera 2</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (3).jpg" alt="Camera 3">
+        <div class="tooltip">Camera 3</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (4).jpg" alt="Camera 4">
+        <div class="tooltip">Camera 4</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (5).jpg" alt="Camera 5">
+        <div class="tooltip">Camera 5</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (6).jpg" alt="Camera 6">
+        <div class="tooltip">Camera 6</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (7).jpg" alt="Camera 7">
+        <div class="tooltip">Camera 7</div>
+      </div>
+      <div class="camera__card"><img src="images/digital (8).jpg" alt="Camera 8">
+        <div class="tooltip">Camera 8</div>
+      </div>
+    </div>
+  </div>
+
+<!-- A FORM TO BE FILLED BY THE CUSTOMER -->
+
+<div class="form-section">
+  <h2>Fill the following form:</h2>
+  <form>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="camera">Chosen Camera:</label>
+    <select id="camera" name="camera-name">
+      <option>--Select A Camera--</option> <!--This one is default-->
+      <option value="camera 1">Camera 1</option>
+      <option value="camera 2">Camera 2</option>
+      <option value="camera 3">Camera 3</option>
+      <option value="camera 4">Camera 4</option>
+      <option value="camera 5">Camera 5</option>
+      <option value="camera 6">Camera 6</option>
+      <option value="camera 7">Camera 7</option>
+      <option value="camera 8">Camera 8</option>
+    </select>   
+
+    <label for="contact">Preferred Mode of Contact:</label>
+    <select id="contact" name="contact">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+
+    <p class="form-note">Our team will contact you regarding the purchase.</p>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<p>PREMIUM CAMERAS</p>
+&copy; 2025
+<p>All rights reserved.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
